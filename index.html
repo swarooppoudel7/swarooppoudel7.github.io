@@ -18,11 +18,6 @@ body, html {
   padding:0;
 }
 
-a{
-  text-decoration: none;
-  color: white;
-}
-
 .header {
   padding: 100px;
   text-align: center;
@@ -33,7 +28,22 @@ a{
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
-   background-attachment: fixed;
+  background-attachment: fixed;
+}
+
+.podcast{
+  background-image: url(img/1.png), url(img/2.png);
+  background-color: #2f5483;
+  background-position: right, left;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  color: white;
+  padding: 100;
+}
+
+div{
+    margin:10;
+  padding:10;
 }
 
 .nav ul {
@@ -46,6 +56,10 @@ a{
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+}
+
+.nav-right {
+  float: right;
 }
 
 .nav li {display:inline-block;}
@@ -67,6 +81,44 @@ a{
   text-align: center;
 }
 
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+
 </style>
 <body>
 
@@ -77,10 +129,13 @@ a{
 <div class=nav>
   <ul>
   <li><a href="home.html">Home</a></li>
-  <li><a href="projects.html">Prodcast</a></li>
-  <li><a href="blogs.html">Projects and Research</a></li>
-  <li><a href ="cv.html">The stats guy</a></li>
-  <li><a href="about.html">Contact</a></li>
+  <li><a href=#podcast>Prodcast</a></li>
+  <li><a href=#project>Projects and Research</a></li>
+  <li><a href=#contact>Contact</a></li>
+   <div class="nav-right">
+    <li ><a href ="cv.html">CV</a></li>
+  <li ><a href ="cv.html">The stats guy</a></li>
+</div>
 </ul>
 
 </div>
@@ -88,14 +143,14 @@ a{
 <div class="abput">
   <h3 class="center">ABOUT ME</h3>
   <p>
-    I am a recent graduate of Beloit College (class of '22), majoring in Psychology and Business Economics with a minor in Computer Science. I am starting the position of Behavioral Research Fellow at Northwestern University this summer. I'm interested in understanding decision-making in the context of health and wellbeing at the individual level looking at persuasion and habit formation to establish healthier lives. Taking this a step further, I am also interested in understanding fit and belonging at an organizational level and decision making at the organizational level to improve employees' health and wellbeing in the workspace. I am also currently working to bring academic research and literature with easy-to-digest snippets in the form of a podcast: Understanding your decisions with Swaroop Poudel. 
+    I am a recent graduate of Beloit College (class of '22), majoring in Psychology and Business Economics with a minor in Computer Science. I am starting the position of Behavioral Research Fellow at Northwestern University this summer. I'm interested in understanding decision-making in the context of health and well-being at the individual level looking at persuasion and habit formation to establish healthier lives. Taking this a step further, I am also interested in understanding fit and belonging at an organizational level and decision making at the organizational level to improve employees' health and well-being in the workspace. I am also currently working to bring academic research and literature with easy-to-digest snippets in the form of a podcast: Understanding your decisions with Swaroop Poudel. 
   </p>
 </div>
 
 <div class="podcast">
-  <h3 class="center" id="about">Check out the podcast!</h3>
+  <h2 class="center" id="about">Check out the podcast!</h2>
   <h3 class="center" id="about">Underworkings of everyday life</h3>
-  <p>Find me on Spotify, Apple Music or on Youtube</p>
+  <p class="center">Find me on Spotify, Apple Music or on Youtube</p>
 </div>
   <p>
     
@@ -104,38 +159,52 @@ a{
 
 <div class="project">
   <h3 class="center" id="about">Projects and Reserach</h3>
-  <h4> Predicting heroine and coke usage based on personality and demogrpahic informations using baysian classifier,
-      neural networks and decesion tree</h4> 
-      <p> What can predict the use of hard drugs? Is it right to call Marijuna or Alcohol gateway drugs and how does use       of other substance, personality and demographics predict the use of Coke and Heroin. </p>
-  <h4> Data Scraping to look at </h4> 
-  <p></p>
+
+  <h4> Predicting heroine and coke usage based on personality and demographic pieces of information using Bayesian classifier,
+      neural networks, and decision tree</h4> 
+      <p> What can predict the use of hard drugs? Is it right to call Marijuana or Alcohol gateway drugs, and how does the use of other substances, personality, and demographics predict the use of Coke and Heroin. In this study, the model was able to predict the likelihood of using these substances with an accuracy of. <a href=""> Additional info at Git Hub</a></p>
+
+  <h4> GRE Essay Questions by area: An application of web-scraping </h4> 
+  <p> GRE Utilizes the same set of questions for every test. Grouping these questions based on areas can allow for better preperation for the GRE while investing less amout of time. <a href="">Find this list here</a></p>
+
     <h4> Influence of Messaging Styles and personality on charitable giving attitude </h4> 
-    <p> Over two-thirds of all donations to charities in the US come from individuals. Charitable organizations rely   heavily on individuals to make donations for their prosperity. These Individuals make these donation decisions based on internal factors like their personality and beliefs or external factors like the amount of money they have or persuasion. Understanding these factors can increase community support and promote pro-social behavior. I investigated the influence of personality, messaging, and the amount of fictitious money someone has on people’s donation attitudes by running a study on Amazon MTurk. </p>
+    <p> Over two-thirds of all donations to charities in the US come from individuals. Charitable organizations rely heavily on individuals to make donations for their prosperity. These Individuals make these donation decisions based on internal factors like their personality and beliefs or external factors like the amount of money they have or persuasion. Understanding these factors can increase community support and promote pro-social behavior. I investigated the influence of personality, messaging, and the amount of fictitious money someone has on people's donation attitudes. Participants on Amazon MTurk filled out a personality index, then declared how much they would donate to a charity based on a poster they observed. There was no main effect of messaging or fictitious amount on donation amount, and there was no interaction between them. However, we observed that individuals high in extraversion had small but significantly higher levels of giving..<a href=""> Find Poster Here</a></p>
     
      <h4> Relationship Between Technology Access and Subjective Well-Being: An Analysis of Low-Middle Income Nations </h4> 
 
-     <p>Access to information and communication technologies (ICT) can allow for greater Subjective Well-Being (SWB). The same ICT has the potential to have negative effects at a point of satiation, especially for those who have achieved a certain level of wealth. This study looks at the relationship between ICT and SWB with wealth as a moderator in 18 low- to middle-income nations.
+     <p>Rising nation-level wealth is associated with increased subjective well-being (SWB). This paper looks at the complementary idea that access to information and communication technologies (ICT) has the potential to improve SWB. Increases in ICT access can empower people with lower levels of wealth, as it may provide novel ways to complete day-to-day tasks more efficiently and safely. However, the same ICTs also have the potential to affect people who overuse them negatively. This can be seen in technological interference with relationships and routines and increased levels of distress for heavy technology users. This is especially true in technologically saturated places, such as many modern, Western societies. This study examines the ICT access-SWB relationship, exploring wealth as a potential moderator. Using data collected by UNICEF, this research explores these relationships in 24 low- to middle-wealth nations, controlling for other relevant factors. The data (N = ) show that ICT use is most strongly predicts SWB among people who are the least wealthy and that the strength of this relationship decreases with increases in wealth. <a href=""> Find Poster Here</a></p>
 
-</p>
      <h4> Impacts of internal migration on well-being in Bangladesh </h4> 
-     <p> This reserach investigated the impact of internal migration on the well-being of the migrant population in Bangladesh. Specifically, the research empirically tests the association between internal migration and three different measures of well-being: subjective well-being, material well-veing, and happiness. Mass migration has been a promient aspect of the century, with massive rise in global urban population. Major economic influences have been researched extensively as a reasult of this mass migration. however, psychological aspects of internal migration on migrants have been analyzed to a much lesser extent in economic literature. </p>
-     <h4> Explorative vs exploitative decision making in people with high openness to experience </h4> 
-     <p> 
-     </p>
+     <p> This research investigated the impact of internal migration on the well-being of the migrant population in Bangladesh. Specifically, the research empirically tests the association between internal migration and three different measures of well-being: subjective well-being, material well-being, and happiness. Mass migration has been a prominent aspect of the century, with the massive rise in the global urban population. Major economic influences have been researched extensively due to this mass migration. However, psychological aspects of internal migration on migrants have been analyzed to a much lesser extent in economic literature. The data suggested that an increased level of technology access and a higher level of education was the largest predictor of the well-being of women regardless of migration status. Suggesting policy implications that promote increased access to technology and wider education campaigns. <a href="">Find presentation here</a> </p>
+
      <h4> Where to eat: Logo color and tones of establishments and likelyhood of visiting </h4> 
      <p>
+      Logos of products, brands, and restaurants may attract consumers based on the emphasis consumers place on the visual appearance of their logo design. The color tones of logos may also attract consumers based on their prior association with the particular color. Our research looked specifically at how the color tones of restaurant logos would influence the likelihood of someone visiting. Eighty-nine participants completed a survey that asked them to rate their likelihood of visiting a restaurant based solely on the given logo. The results were consistent with past research about the color being important to consumers, but consumers did not prefer a specific hue for visiting resturants. These findings can allow restaurants and businesses to be more proactive when choosing or designing their logo.
      </p>
-     <h4> Importance Of Face in South Asian Cultures: An analysis of the movie Badhaii Ho</h4> 
-     <p>
-       
-     </p>
-     <h4> Role of conformity in the widespread use of JUULs among high school students </h4>
-     <p>
-
-     </p>
-    
 </div>
 
+
+<div class="contact">
+  <div class="center">
+    <h2>Contact Me</h2>
+    <p>I'd love to hear any feedback or suggestions</p>
+  </div>
+        <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name">
+         <label for="lname">Email</label>
+        <input type="text" id="email" name="email" placeholder="Email"
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+  </div>
+  </div>
+</div>
 </body>
 </html>
 
